@@ -19,32 +19,32 @@
     $user = displayUser();
     
     echo "<h1> Welcome "; 
-    echo $user['username']. " Coins: ". $user['coins']. "</h1>";
+    echo $user[0]['username']. " Coins: ". $user[0]['coins']. "</h1>";
     
     if (isset ($_GET['submit'])){
         if(($_GET['set1'])== "1 pack"){
-            if($user['coins'] < 5){
+            if($user[0]['coins'] < 5){
                 echo "Sorry but you can't afford this! 5 coins.";
             }
             else{
                 $_SESSION['amt'] = 1;
-                $_SESSION['coins'] = $user['coins'];
+                $_SESSION['coins'] = $user[0]['coins'];
                 $_SESSION['done'] = "no";
-                deductCoins(5);
-                $user['coins'] -=5;
+                deductCoins(5,$user[0]['coins']);
+                $user[0]['coins'] -=5;
                 header("Location: openSet1.php");
             }
         }
         else{
-            if($user['coins'] < 50){
+            if($user[0]['coins'] < 50){
                 echo "Sorry but you can't afford this! 50 coins.";
             }
             else{
                 $_SESSION['amt'] = 10;
-                $_SESSION['coins'] = $user['coins'];
+                $_SESSION['coins'] = $user[0]['coins'];
                 $_SESSION['done'] = "no";
-                deductCoins(50);
-                $user['coins'] -=50;
+                deductCoins(50,$user[0]['coins']);
+                $user[0]['coins'] -=50;
                 header("Location: openSet1.php");
             }
         }
@@ -77,7 +77,7 @@
             for($i=0; $i< sizeof($set1); $i++){
                 echo "<tr>";
                 echo "<td>";
-                echo $set1[$i]['name'];
+                echo $set1[$i]['cardname'];
                 echo "</td>";
                 echo "<td>";
                 echo $set1[$i]['price'];

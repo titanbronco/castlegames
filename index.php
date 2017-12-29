@@ -12,6 +12,9 @@
         if(($_POST['username']) != "tin"){
             header("Location: user.php");
         }
+        else{
+            header("Location: admin.php");
+        }
         
     }
  

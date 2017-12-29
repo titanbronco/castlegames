@@ -22,7 +22,7 @@
     $user = displayUser();
     
     echo "<h1> Welcome "; 
-    echo $user['username']. " Coins: ". $user['coins']. "</h1>";
+    echo $user[0]['username']. " Coins: ". $user[0]['coins']. "</h1>";
     
     ?>
             <h1> Latest News </h1>

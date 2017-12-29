@@ -1,4 +1,4 @@
-Acrobat Monkey,1,0
+Acrobat Monkey,1,10
 Electric Snake,1,0
 Metal Fish,1,0
 Giant Turtle Who Feeds on Flames,1,0

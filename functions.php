@@ -35,8 +35,8 @@ function openSet1(){
     
     $name = $records[$r]['cardname'];
     $sql = "UPDATE cardpool SET amount = $amount WHERE cardname='$name'";
-    echo $sql;
-    echo $name;
+   // echo $sql;
+   // echo $name;
         $stmt = $conn->prepare($sql);
         $stmt->execute();
     
@@ -169,10 +169,10 @@ function seedBase(){
         $price = $user[$i]['price'];
         $amount = $user[$i]['amount'];
         $sql = "INSERT into cardpool (cardname,price,amount,setname) VALUES ('$name', $price,$amount,1)";
-        echo $user[$i]['name'];
+        //echo $user[$i]['name'];
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-        echo $sql;
+        //echo $sql;
     }
     
    // return $user;

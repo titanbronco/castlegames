@@ -42,7 +42,7 @@
             else{
                 $_SESSION['amt'] = 10;
                 $_SESSION['coins'] = $user['coins'];
-                $_SESSION['done'] = "yes";
+                $_SESSION['done'] = "no";
                 deductCoins(50);
                 $user['coins'] -=50;
                 header("Location: openSet1.php");

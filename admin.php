@@ -12,6 +12,8 @@
     <?php
     include 'functions.php';
     
+    //seedBase();
+    
     if(isset($_GET['submit1'])){
         $amt = $_GET['amount'];
         $cardid = $_GET['cardid'];

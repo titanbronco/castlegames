@@ -8,11 +8,13 @@
     
     <body>
     <?php
+    include 'functions.php';
     if (isset($_POST['loginForm'])){
         if(($_POST['username']) != "tin"){
             header("Location: user.php");
         }
         else{
+            //seedBase();
             header("Location: admin.php");
         }
         

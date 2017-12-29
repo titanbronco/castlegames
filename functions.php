@@ -3,9 +3,9 @@
 function openSet1(){
     
     $host = "us-cdbr-iron-east-05.cleardb.net";
-     $username = "bbf7de8df9454c";
-     $password = "441ff6f0";
-    $dbname="heroku_6ed4258c62bdf7f";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
@@ -92,9 +92,9 @@ function openSet1(){
 
 function changeCard($id, $amt){
     $host = "us-cdbr-iron-east-05.cleardb.net";
-     $username = "bbf7de8df9454c";
-     $password = "441ff6f0";
-    $dbname="heroku_6ed4258c62bdf7f";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $sql = "SELECT distinct* FROM cardpool WHERE setname=1";
@@ -121,9 +121,9 @@ function changeCard($id, $amt){
 
 function displaySet1(){
     $host = "us-cdbr-iron-east-05.cleardb.net";
-     $username = "bbf7de8df9454c";
-     $password = "441ff6f0";
-    $dbname="heroku_6ed4258c62bdf7f";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
@@ -138,28 +138,53 @@ function displaySet1(){
     
 }
 
-/*
-function displayUser(){
-    $user = array("username","coins");
-    $myfile = fopen("user.txt", "r") or die("Unable to open file!");
+
+function seedBase(){
+    //$user = array("username","coins");
+    $host = "us-cdbr-iron-east-05.cleardb.net";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
+// Create connection
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    $counter=0;
+    
+    $user = array(array("name","price","amount"));
+    $myfile = fopen("set1.txt", "r") or die("Unable to open file!");
     while(!feof($myfile)){
         $line = fgets($myfile);
         $disUser = explode(',',$line);
-        $user['username']=$disUser[0];
-        $user['coins']=$disUser[1];
+        $user[$counter]['name']=$disUser[0];
+        $user[$counter]['price']=$disUser[1];
+        $user[$counter]['amount']=$disUser[2];
+        $counter++;
     }
     fclose($myfile);
     
-    return $user;
+    //print_r($user);
+    
+    for($i=0; $i<sizeof($user); $i++){
+        $name = $user[$i]['name'];
+        $price = $user[$i]['price'];
+        $amount = $user[$i]['amount'];
+        $sql = "INSERT into cardpool (cardname,price,amount,setname) VALUES ('$name', $price,$amount,1)";
+        echo $user[$i]['name'];
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        echo $sql;
+    }
+    
+   // return $user;
 }
-*/
+
 
 function displayUser(){
     $user = array("username","coins");
     $host = "us-cdbr-iron-east-05.cleardb.net";
-     $username = "bbf7de8df9454c";
-     $password = "441ff6f0";
-    $dbname="heroku_6ed4258c62bdf7f";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
@@ -198,9 +223,9 @@ function deductCoins($amt){
 */
 function deductCoins($amt,$oldtotal){
     $host = "us-cdbr-iron-east-05.cleardb.net";
-     $username = "bbf7de8df9454c";
-     $password = "441ff6f0";
-    $dbname="heroku_6ed4258c62bdf7f";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $amt = $oldtotal - $amt;
@@ -215,9 +240,9 @@ function deductCoins($amt,$oldtotal){
 
 function deductCoinsAdmin($amt){
     $host = "us-cdbr-iron-east-05.cleardb.net";
-     $username = "bbf7de8df9454c";
-     $password = "441ff6f0";
-    $dbname="heroku_6ed4258c62bdf7f";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     

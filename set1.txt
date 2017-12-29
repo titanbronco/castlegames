@@ -1,0 +1,60 @@
+Acrobat Monkey,1,2
+Electric Snake,1,0
+Metal Fish,1,0
+Giant Turtle Who Feeds on Flames,1,0
+Liquid Beast,1,0
+Toll,1,1
+Red Archery Girl,1,2
+Gravekeepers Servant,1,0
+The Reliable Guardian,1,0
+Psychic Kappa,1,0
+Octoberser,1,1
+Ancient Elf,1,2
+Giga-Tech Wolf,1,1
+Block Attack,1,0
+High Tide Gyojin,1,2
+Weather Report,1,1
+Black Pendant,1,0
+Mechanical Snail,1,0
+Guardian of the Throne Room,1,0
+Penguin Knight,1,0
+Amazon of the Seas,3,0
+Ameba,3,0
+Dark Witch,3,0
+Slot Machine,3,1
+Black Illusion Ritual,3,1
+Upstart Goblin,3,1
+Blast Juggler,3,1
+Dust Tornado,3,1
+Rush Recklessly,3,0
+Senju of the Thousand Hands,3,0
+Summoned Skull,3,0
+7 Colored Fish,3,0
+Dark Elf,3,1
+Cannon Soldier,3,1
+Flame Cerberus,3,1
+Paralyzing Potion,3,0
+Illusionist Faceless Mage,3,0
+Messenger of Peace,3,0
+Curse of Fiend,5,0
+Amphibian Beast,5,2
+Akakieisu,5,1
+Axe of Despair,5,0
+Fairys Hand Mirror,5,0
+Snake Fang,5,0
+Minar,5,0
+Saggi the Dark Clown,5,1
+Time Wizard,5,0
+Enchanted Javelin,5,0
+Disk Magician,5,0
+Granmarg the Rock Monarch,5,0
+Island Turtle,20,0
+Eternal Rest,20,0
+Spellbinding Circle,20,0
+Maha Vailo,20,0
+Relinquished,20,0
+Darkness Approaches,20,0
+Horn of the Unicorn,20,0
+Hoshiningen,20,0
+Thousand Dragon,50,0
+Barrel Dragon,50,0

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <a href="user.php">Home Page</a>
+        <a href="set1.php">Set 1</a>
+        
+        <?php
+        include 'functions.php';
+        ?>
+        
+    </head>
+    
+    <body>
+    <?php
+    session_start();
+    $user = displayUser();
+    
+    echo "<h1> Welcome "; 
+    echo $user['username']. " Coins: ". $user['coins']. "</h1>";
+    
+    if (isset ($_GET['submit'])){
+        if(($_GET['set1'])== "1 pack"){
+            if($user['coins'] < 5){
+                echo "Sorry but you can't afford this! 5 coins.";
+            }
+            else{
+                $_SESSION['amt'] = 1;
+                deductCoins(5);
+                header("Location: openSet1.php");
+            }
+        }
+        else{
+            if($user['coins'] < 50){
+                echo "Sorry but you can't afford this! 50 coins.";
+            }
+            else{
+                $_SESSION['amt'] = 10;
+                deductCoins(50);
+                header("Location: openSet1.php");
+            }
+        }
+    }
+ 
+    
+    ?>
+    <h2>
+        Purchase Set 1! 5 Coins Per Pack
+    </h2>
+    <form method="get">
+  <input list="set1" name="set1">
+  <datalist id="set1">
+    <option value="1 pack">
+    <option value="1 box (10 packs)">
+  </datalist>
+  <input name ="submit" type="submit">
+</form>
+    <img src="images/set1/59.png"/>;
+            <h1> Your Set 1 Cards </h1>
+            
+            <?php
+            $set1 = displaySet1();
+            echo "<table>
+                  <tr>
+                    <th>Card</th>
+                    <th>Price in Coins</th>
+                    <th>Amount Owned</th>
+                  </tr>";
+            for($i=0; $i< sizeof($set1); $i++){
+                echo "<tr>";
+                echo "<td>";
+                echo $set1[$i]['name'];
+                echo "</td>";
+                echo "<td>";
+                echo $set1[$i]['price'];
+                echo "</td>";
+                echo "<td>";
+                echo $set1[$i]['amount'];
+                echo "</td>";
+
+            }
+            
+            ?>
+        
+    </body>
+</html>

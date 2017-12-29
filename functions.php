@@ -35,13 +35,13 @@ function openSet1(){
     $pack['card1'] = $card[$r]['name'];
     
     $r = rand(1,100);
-    if($r >0 && $r< 70){
+    if($r >0 && $r< 65){
         $r = rand(20,37);
     }
-    else if($r>=70 && $r<89){
+    else if($r>=65 && $r<85){
         $r = rand(38,49);
     }
-    else if($r>=89 && $r<99){
+    else if($r>=85 && $r<99){
         $r = rand(50,57);
     }
     else if($r>=99 && $r<101){

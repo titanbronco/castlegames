@@ -1,19 +1,19 @@
-Acrobat Monkey,1,2
+Acrobat Monkey,1,0
 Electric Snake,1,0
 Metal Fish,1,0
 Giant Turtle Who Feeds on Flames,1,0
 Liquid Beast,1,0
-Toll,1,1
-Red Archery Girl,1,2
+Toll,1,0
+Red Archery Girl,1,0
 Gravekeepers Servant,1,0
 The Reliable Guardian,1,0
 Psychic Kappa,1,0
-Octoberser,1,1
-Ancient Elf,1,2
-Giga-Tech Wolf,1,1
+Octoberser,1,0
+Ancient Elf,1,0
+Giga-Tech Wolf,1,0
 Block Attack,1,0
-High Tide Gyojin,1,2
-Weather Report,1,1
+High Tide Gyojin,1,0
+Weather Report,1,0
 Black Pendant,1,0
 Mechanical Snail,1,0
 Guardian of the Throne Room,1,0
@@ -21,29 +21,29 @@ Penguin Knight,1,0
 Amazon of the Seas,3,0
 Ameba,3,0
 Dark Witch,3,0
-Slot Machine,3,1
-Black Illusion Ritual,3,1
-Upstart Goblin,3,1
-Blast Juggler,3,1
-Dust Tornado,3,1
+Slot Machine,3,0
+Black Illusion Ritual,3,0
+Upstart Goblin,3,0
+Blast Juggler,3,0
+Dust Tornado,3,0
 Rush Recklessly,3,0
 Senju of the Thousand Hands,3,0
 Summoned Skull,3,0
 7 Colored Fish,3,0
-Dark Elf,3,1
-Cannon Soldier,3,1
-Flame Cerberus,3,1
+Dark Elf,3,0
+Cannon Soldier,3,0
+Flame Cerberus,3,0
 Paralyzing Potion,3,0
 Illusionist Faceless Mage,3,0
 Messenger of Peace,3,0
 Curse of Fiend,5,0
-Amphibian Beast,5,2
-Akakieisu,5,1
+Amphibian Beast,5,0
+Akakieisu,5,0
 Axe of Despair,5,0
 Fairys Hand Mirror,5,0
 Snake Fang,5,0
 Minar,5,0
-Saggi the Dark Clown,5,1
+Saggi the Dark Clown,5,0
 Time Wizard,5,0
 Enchanted Javelin,5,0
 Disk Magician,5,0

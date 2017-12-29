@@ -17,10 +17,18 @@ function openSet1(){
     $r = rand(0,19);
     $amount = $card[$r]['amount'];
     $amount+=1;
-    echo $amount;
+   // echo $amount;
     $card[$r]['amount']=$amount;
     $card[$r]['amount']=(string) $card[$r]['amount'];
-    echo $card[$r]['amount'];
+    //echo $card[$r]['amount'];
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>";
+    echo $pack['card2'];
+    echo "</th>";
+    echo "<tr>";
+    echo "<td>";
+    echo "<img src='images/set1/$r.png'>";
     
     $pack = array("card1","card2");
     $pack['card1'] = $card[$r]['name'];
@@ -41,10 +49,16 @@ function openSet1(){
     
     $amount = $card[$r]['amount'];
     $amount+=1;
-    echo $amount;
+    //echo $amount;
     $card[$r]['amount']=$amount;
     $card[$r]['amount']=(string) $card[$r]['amount'];
-    echo $card[$r]['amount'];
+    //echo $card[$r]['amount'];
+    echo "<th>";
+    echo $pack['card2'];
+    echo "</th>";
+    echo "<tr>";
+    echo "<td>";
+    echo "<img src='images/set1/$r.png'>";
     
     $pack['card2'] = $card[$r]['name'];
     

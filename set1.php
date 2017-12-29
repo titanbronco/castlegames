@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
         <a href="user.php">Home Page</a>
         <a href="set1.php">Set 1</a>
+        <a href="logout.php">Log Out</a>
         
         <?php
         include 'functions.php';
@@ -27,7 +28,10 @@
             }
             else{
                 $_SESSION['amt'] = 1;
+                $_SESSION['coins'] = $user['coins'];
+                $_SESSION['done'] = "no";
                 deductCoins(5);
+                $user['coins'] -=5;
                 header("Location: openSet1.php");
             }
         }
@@ -37,7 +41,10 @@
             }
             else{
                 $_SESSION['amt'] = 10;
+                $_SESSION['coins'] = $user['coins'];
+                $_SESSION['done'] = "yes";
                 deductCoins(50);
+                $user['coins'] -=50;
                 header("Location: openSet1.php");
             }
         }

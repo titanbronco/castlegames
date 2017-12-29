@@ -23,12 +23,13 @@ function openSet1(){
     //echo $card[$r]['amount'];
     echo "<table>";
     echo "<tr>";
-    echo "<th>";
-    echo $pack['card2'];
-    echo "</th>";
+   // echo "<th>";
+   // echo $pack['card2'];
+   // echo "</th>";
     echo "<tr>";
     echo "<td>";
     echo "<img src='images/set1/$r.png'>";
+    echo "</td>";
     
     $pack = array("card1","card2");
     $pack['card1'] = $card[$r]['name'];
@@ -53,12 +54,14 @@ function openSet1(){
     $card[$r]['amount']=$amount;
     $card[$r]['amount']=(string) $card[$r]['amount'];
     //echo $card[$r]['amount'];
-    echo "<th>";
-    echo $pack['card2'];
-    echo "</th>";
-    echo "<tr>";
+    //echo "<th>";
+   // echo $pack['card2'];
+   // echo "</th>";
+    //echo "<tr>";
     echo "<td>";
     echo "<img src='images/set1/$r.png'>";
+    echo "</td>";
+    echo "</table>";
     
     $pack['card2'] = $card[$r]['name'];
     

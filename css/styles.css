@@ -20,6 +20,7 @@ header {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
+    margin-left: 40%;
 }
 
 td, th {

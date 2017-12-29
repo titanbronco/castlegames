@@ -1,0 +1,8 @@
+Toon World,10,0
+Toon Alligator,10,0
+Toon Summoned Skull,10,0
+Toon Mermaid,10,0
+Toon Masked Sorcerer,10,0
+Toon Blue Eyes White Dragon,10,0
+Toon Table of Contents,10,0
+Toon Rollback,10,0

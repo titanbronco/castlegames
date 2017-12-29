@@ -49,6 +49,21 @@
             }
         }
     }
+    
+    if (isset ($_GET['submit1'])){
+            if($user[0]['coins'] < 75){
+                echo "Sorry but you can't afford this! 75 coins.";
+            }
+            else{
+                $_SESSION['amt'] = 1;
+                $_SESSION['coins'] = $user[0]['coins'];
+                $_SESSION['done'] = "no";
+                deductCoins(75,$user[0]['coins']);
+                $user[0]['coins'] -=75;
+                header("Location: openSet2.php");
+            }
+
+    }
  
     
     ?>
@@ -64,6 +79,14 @@
   <input name ="submit" type="submit">
 </form>
     <img src="images/set1/59.png"/>;
+    <h2>Purchase Set 1 Expansion: Toon World! Includes 2 random promo cards and 5 Set 1 Packs!</h2>
+    <form method="get">
+  <input list="set2" name="set2">
+  <datalist id="set2">
+    <option value="1 Expansion(2 promos + 5 packs)">
+  </datalist>
+  <input name ="submit1" type="submit">
+</form>
             <h1> Your Set 1 Cards </h1>
             
             <?php

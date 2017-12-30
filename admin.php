@@ -17,7 +17,8 @@
     if(isset($_GET['submit1'])){
         $amt = $_GET['amount'];
         $cardid = $_GET['cardid'];
-        changeCard($cardid,$amt);
+        $price = $_GET['price'];
+        changeCard($cardid,$amt,$price);
         echo "Success!";
     }
     if(isset($_GET['submit2'])){
@@ -31,7 +32,9 @@
         Card ID:<br>
   <input type="text" name="cardid"><br>
   Amount(+/-):<br>
-  <input type="text" name="amount"><br><br>
+  <input type="text" name="amount"><br>
+  New Price:<br>
+  <input type="text" name="price" value=0><br><br>
   <input type="submit" name = "submit1" value="Submit">
     </form>
     <form>

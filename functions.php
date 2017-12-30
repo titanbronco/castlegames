@@ -172,14 +172,14 @@ function openSet2(){
     
 }
 
-function changeCard($id, $amt){
+function changeCard($id, $amt, $price){
     $host = "us-cdbr-iron-east-05.cleardb.net";
      $username = "b8507d35f027f0";
      $password = "ebc8d031";
     $dbname="heroku_7f04ff4b9d6c0d0";
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $sql = "SELECT distinct* FROM cardpool WHERE setname=1";
+    $sql = "SELECT distinct* FROM cardpool";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -190,7 +190,12 @@ function changeCard($id, $amt){
     $records[$id]['amount']=$amount;
     
     $name = $records[$id]['cardname'];
+    if($price ==0){
     $sql = "UPDATE cardpool SET amount = $amount WHERE cardname='$name'";
+    }
+    else{
+        $sql = "UPDATE cardpool SET amount = $amount, price = $price WHERE cardname='$name'";
+    }
     echo $sql;
     echo $name;
         $stmt = $conn->prepare($sql);

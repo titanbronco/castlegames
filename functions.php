@@ -172,6 +172,96 @@ function openSet2(){
     
 }
 
+function openSet3(){
+    
+    $host = "us-cdbr-iron-east-05.cleardb.net";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
+// Create connection
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    $sql = "SELECT distinct* FROM cardpool WHERE setname=3";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        //print_r($records);
+    
+    
+    $r = rand(0,10);
+    $amount = $records[$r]['amount'];
+    $amount+=1;
+   // echo $amount;
+    $records[$r]['amount']=$amount;
+    //echo $card[$r]['amount'];
+    echo "<table>";
+    echo "<tr>";
+   // echo "<th>";
+   // echo $pack['card2'];
+   // echo "</th>";
+    echo "<tr>";
+    echo "<td>";
+    echo "<img src='images/set3/$r.png'>";
+    echo "</td>";
+    
+    $name = $records[$r]['cardname'];
+    $sql = "UPDATE cardpool SET amount = $amount WHERE cardname='$name'";
+    echo $sql;
+   // echo $name;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+    
+    $pack = array("card1","card2");
+    $pack['card1'] = $records[$r]['name'];
+    
+    $r = rand(1,100);
+    if($r >0 && $r< 65){
+        $r = rand(11,25);
+    }
+    else if($r>=65 && $r<85){
+        $r = rand(26,39);
+    }
+    else if($r>=85 && $r<99){
+        $r = rand(40,47);
+    }
+    else if($r>=99 && $r<101){
+        $r = rand(48,49);
+    }
+    
+   $amount = $records[$r]['amount'];
+    $amount+=1;
+   // echo $amount;
+    $records[$r]['amount']=$amount;
+    $records[$r]['amount']=$card[$r]['amount'];
+    //echo $card[$r]['amount'];
+    //echo "<th>";
+   // echo $pack['card2'];
+   // echo "</th>";
+    //echo "<tr>";
+    echo "<td>";
+    echo "<img src='images/set3/$r.png'>";
+    echo "</td>";
+    echo "</table>";
+    
+     $name = $records[$r]['cardname'];
+    $sql = "UPDATE cardpool SET amount = $amount WHERE cardname='$name'";
+    //echo $sql;
+   // echo $name;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+    
+    $pack['card2'] = $records[$r]['name'];
+    
+    
+    //print_r($card);
+    
+    
+    return $pack;
+    
+    
+}
+
 function changeCard($id, $amt, $price){
     $host = "us-cdbr-iron-east-05.cleardb.net";
      $username = "b8507d35f027f0";
@@ -206,7 +296,7 @@ function changeCard($id, $amt, $price){
     
 }
 
-function displaySet1(){
+function displaySet1($set){
     $host = "us-cdbr-iron-east-05.cleardb.net";
      $username = "b8507d35f027f0";
      $password = "ebc8d031";
@@ -214,7 +304,13 @@ function displaySet1(){
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
-    $sql = "SELECT distinct* FROM cardpool WHERE setname=1 OR setname=2";
+    if($set==1){
+        $sql = "SELECT distinct* FROM cardpool WHERE setname=1 OR setname=2";
+    }
+    else if($set==3){
+        $sql = "SELECT distinct* FROM cardpool WHERE setname=3";
+    }
+    
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -238,7 +334,7 @@ function seedBase(){
     $counter=0;
     
     $user = array(array("name","price","amount"));
-    $myfile = fopen("set2.txt", "r") or die("Unable to open file!");
+    $myfile = fopen("set3.txt", "r") or die("Unable to open file!");
     while(!feof($myfile)){
         $line = fgets($myfile);
         $disUser = explode(',',$line);
@@ -255,7 +351,7 @@ function seedBase(){
         $name = $user[$i]['name'];
         $price = $user[$i]['price'];
         $amount = $user[$i]['amount'];
-        $sql = "INSERT into cardpool (cardname,price,amount,setname) VALUES ('$name', $price,$amount,2)";
+        $sql = "INSERT into cardpool (cardname,price,amount,setname) VALUES ('$name', $price,$amount,3)";
         //echo $user[$i]['name'];
         $stmt = $conn->prepare($sql);
         $stmt->execute();

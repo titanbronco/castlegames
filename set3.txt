@@ -1,0 +1,50 @@
+Gift of the Mystical Elf,1,0
+Darkfire Soldier #2,1,0
+Imperial Order,1,0
+Hayabusa Knight,1,0
+Fairy Meteor Crush,1,0
+Deepsear Warrior,1,0
+Lady Assailant of Flames,1,0
+Lesser Fiend,1,0
+Skull Knight #2,1,0
+Shadow Tamer,1,0
+Opticlops,1,0
+Asura Priest,1,0
+Parasite Paracide,2,0
+Melchid the Four Faced Beast,2,0
+Kycoo the Ghost Destroyer,2,0
+Toon Cannon Soldier,2,0
+7 Tools of the Bandit,2,0
+Sonic Bird,2,0
+Emergency Provisions,2,0
+Possessed Dark Soul,2,0
+Winged Minion,2,0
+Exiled Force,2,0
+Thousand Eye Idol,2,0
+Burning Land,2,0
+Flame Champion,2,0
+Darkfire Soldier #1,2,0
+Mr Volcano,5,0
+Jinzo,5,0
+Ryu Kishin Clown,5,0
+Bark of Dark Ruler,5,0
+Copycat,5,0
+Toon Defense,5,0
+Flame Swordsman,5,0
+Dark Balter the Terrible,5,0
+Grand Tiki Elder,5,0
+Mask of Brutality,5,0
+Mask of Restrict,5,0
+Magic Cylinder,5,0
+Fire Princess,5,0
+Waboku,5,0
+Mage Power,20,0
+Twin Barrel Dragon,20,0
+Red Eyes Toon Dragon,20,0
+Dark Ruler Ha Des,20,0
+Fire Sorcerer,20,0
+Spirit of Flames,20,0
+Gemini Elf,20,0
+The Legendary Fisherman,20,0
+Beast of Talwar,50,0
+Premature Burial,50,0

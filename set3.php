@@ -33,7 +33,7 @@
                 $_SESSION['done'] = "no";
                 deductCoins(5,$user[0]['coins']);
                 $user[0]['coins'] -=5;
-                header("Location: openSet1.php");
+                header("Location: openSet3.php");
             }
         }
         else{
@@ -46,7 +46,7 @@
                 $_SESSION['done'] = "no";
                 deductCoins(50,$user[0]['coins']);
                 $user[0]['coins'] -=50;
-                header("Location: openSet1.php");
+                header("Location: openSet3.php");
             }
         }
     }
@@ -69,7 +69,7 @@
     
     ?>
     <h2>
-        Purchase Set 1! 5 Coins Per Pack
+        Purchase Set 2! 5 Coins Per Pack
         <br>
         View the set: <a href="https://docs.google.com/document/d/1xqmgdQidNKVk7AFAcWZqrNDJ_zkzY9OecFYScsph7Xc/edit?usp=sharing" >HERE</a>
     </h2>
@@ -81,19 +81,11 @@
   </datalist>
   <input name ="submit" type="submit">
 </form>
-    <img src="images/set1/59.png"/>;
-    <h2>Purchase Set 1 Expansion: Toon World! Includes 2 random promo cards and 5 Set 1 Packs!</h2>
-    <form method="get">
-  <input list="set2" name="set2">
-  <datalist id="set2">
-    <option value="1 Expansion(2 promos + 5 packs)">
-  </datalist>
-  <input name ="submit1" type="submit">
-</form>
-            <h1> Your Set 1 Cards </h1>
+    <img src="images/set3/48.png"/>;
+            <h1> Your Set 2 Cards </h1>
             
             <?php
-            $set1 = displaySet1(1);
+            $set1 = displaySet1(3);
             echo "<table>
                   <tr>
                     <th>Card</th>

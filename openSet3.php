@@ -19,11 +19,11 @@
         if($_SESSION['done']=="yes"){
             echo "<h1> Thanks for shopping! </h1>";
             session_destroy();
-            header("Location: set1.php");
+            header("Location: set3.php");
         }
         else{
             
-        openSet2();
+        openSet3();
         }
         ?>
         

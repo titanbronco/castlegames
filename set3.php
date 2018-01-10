@@ -71,7 +71,7 @@
     <h2>
         Purchase Set 2! 5 Coins Per Pack
         <br>
-        View the set: <a href="https://docs.google.com/document/d/1xqmgdQidNKVk7AFAcWZqrNDJ_zkzY9OecFYScsph7Xc/edit?usp=sharing" >HERE</a>
+        View the set: <a href="https://docs.google.com/document/d/1Mhl6QJAlHraykb8oqX8jQ6z2gqe8PJu-occTdYahE90/edit?usp=sharing" >HERE</a>
     </h2>
     <form method="get">
   <input list="set1" name="set1">

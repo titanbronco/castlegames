@@ -207,7 +207,7 @@ function openSet3(){
     
     $name = $records[$r]['cardname'];
     $sql = "UPDATE cardpool SET amount = $amount WHERE cardname='$name'";
-    echo $sql;
+    //echo $sql;
    // echo $name;
         $stmt = $conn->prepare($sql);
         $stmt->execute();

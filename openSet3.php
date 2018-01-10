@@ -23,7 +23,28 @@
         }
         else{
             
-        openSet3();
+        if($amt > 1){
+            for($i = 0; $i <10; $i ++){
+                $pack = openSet3();
+                echo $pack['card1'];
+                echo "<br>";
+                echo $pack['card2'];
+                echo "<br>";
+                $coins-=5;
+                echo $coins;
+            }
+            $_SESSION['done'] = "yes";
+        }
+        else{
+             $pack = openSet3();
+                echo $pack['card1'];
+                echo "<br>";
+                echo $pack['card2'];
+                echo "<br>";
+                $coins-=5;
+                echo $coins;
+                $_SESSION['done'] = "yes";
+        }
         }
         ?>
         

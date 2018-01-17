@@ -61,7 +61,7 @@
                 $_SESSION['done'] = "no";
                 deductCoins(75,$user[0]['coins']);
                 $user[0]['coins'] -=75;
-                header("Location: openSet2.php");
+                header("Location: openSet4.php");
             }
 
     }
@@ -82,6 +82,15 @@
   <input name ="submit" type="submit">
 </form>
     <img src="images/set3/48.png"/>;
+    
+    <h2>Purchase Set 2 Expansion: XYZ Burst! Includes 1 random promo card and 5 Set 2 Packs!</h2>
+    <form method="get">
+  <input list="set2" name="set2">
+  <datalist id="set2">
+    <option value="1 Expansion(1 promo + 5 packs)">
+  </datalist>
+  <input name ="submit1" type="submit">
+</form>
             <h1> Your Set 2 Cards </h1>
             
             <?php

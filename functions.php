@@ -262,6 +262,60 @@ function openSet3(){
     
 }
 
+function openSet4(){
+    
+    $host = "us-cdbr-iron-east-05.cleardb.net";
+     $username = "b8507d35f027f0";
+     $password = "ebc8d031";
+    $dbname="heroku_7f04ff4b9d6c0d0";
+// Create connection
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    $sql = "SELECT distinct* FROM cardpool WHERE setname=4";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        //print_r($records);
+    
+    
+    $r = rand(0,7);
+    $amount = $records[$r]['amount'];
+    $amount+=1;
+   // echo $amount;
+    $records[$r]['amount']=$amount;
+    //echo $card[$r]['amount'];
+    echo "<table>";
+    echo "<tr>";
+   // echo "<th>";
+   // echo $pack['card2'];
+   // echo "</th>";
+    echo "<tr>";
+    echo "<td>";
+    echo "<img src='images/set4/$r.png'>";
+    echo "</td>";
+    
+    $name = $records[$r]['cardname'];
+    $sql = "UPDATE cardpool SET amount = $amount WHERE cardname='$name'";
+   // echo $sql;
+   // echo $name;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+    
+    
+    
+    //print_r($card);
+    
+    for($i=0;$i<5;$i++){
+        openSet3();
+    }
+    
+    
+    return $pack;
+    
+    
+}
+
 function changeCard($id, $amt, $price){
     $host = "us-cdbr-iron-east-05.cleardb.net";
      $username = "b8507d35f027f0";
@@ -308,7 +362,7 @@ function displaySet1($set){
         $sql = "SELECT distinct* FROM cardpool WHERE setname=1 OR setname=2";
     }
     else if($set==3){
-        $sql = "SELECT distinct* FROM cardpool WHERE setname=3";
+        $sql = "SELECT distinct* FROM cardpool WHERE setname=3 or setname=4";
     }
     
         $stmt = $conn->prepare($sql);
@@ -334,7 +388,7 @@ function seedBase(){
     $counter=0;
     
     $user = array(array("name","price","amount"));
-    $myfile = fopen("set3.txt", "r") or die("Unable to open file!");
+    $myfile = fopen("set4.txt", "r") or die("Unable to open file!");
     while(!feof($myfile)){
         $line = fgets($myfile);
         $disUser = explode(',',$line);
@@ -351,7 +405,7 @@ function seedBase(){
         $name = $user[$i]['name'];
         $price = $user[$i]['price'];
         $amount = $user[$i]['amount'];
-        $sql = "INSERT into cardpool (cardname,price,amount,setname) VALUES ('$name', $price,$amount,3)";
+        $sql = "INSERT into cardpool (cardname,price,amount,setname) VALUES ('$name', $price,$amount,4)";
         //echo $user[$i]['name'];
         $stmt = $conn->prepare($sql);
         $stmt->execute();

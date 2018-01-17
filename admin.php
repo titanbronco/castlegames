@@ -32,7 +32,7 @@
         Card ID:<br>
   <input type="text" name="cardid"><br>
   Amount(+/-):<br>
-  <input type="text" name="amount"><br>
+  <input type="text" name="amount" value=0><br>
   New Price:<br>
   <input type="text" name="price" value=0><br><br>
   <input type="submit" name = "submit1" value="Submit">
